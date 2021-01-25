@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "deploy": "ng deploy",
+    "deploy:ci": "ng deploy --name=\"joeveiga\" --email=\"jose.veiga@swimlane.com\""
   },
   "private": true,
   "dependencies": {
