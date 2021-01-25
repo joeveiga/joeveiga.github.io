@@ -1,0 +1,19 @@
+*****************Font**************
+retro gaming : https://www.wfonts.com/font/retro-gaming
+instruction : https://www.wfonts.com/font/instructions
+
+ubuntu : https://fonts.google.com/specimen/Montserrat?category=Sans+Serif&query=monts
+https://fonts.google.com/specimen/Ubuntu?category=Sans+Serif&query=ubunt
+
+
+*****************color*************
+Yellow : #FFC600
+Pink : #FF628C
+Green : #3AD900
+Blue : #0088FF
+
+Dark-blue-
+#366C94
+#122738
+#0C1924
+#081017
