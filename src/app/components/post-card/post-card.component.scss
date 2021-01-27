@@ -1,0 +1,106 @@
+@import "../../../scss/colors";
+
+:host {
+  --post-card-corner-size: 20px;
+  --post-card-padding: calc(var(--post-card-corner-size) * 1.33);
+  --post-card-shadow-length: 10px;
+
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  transition: filter 0.1s;
+  will-change: transform;
+  filter: drop-shadow(0px 0px 0px #000);
+
+  &.post-card__hover {
+    filter: drop-shadow(
+      calc(-1 * var(--post-card-shadow-length)) var(--post-card-shadow-length)
+        #000
+    );
+  }
+
+  .post-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: $dark-blue-3;
+    color: white;
+    padding: var(--post-card-padding);
+    clip-path: polygon(
+      var(--post-card-corner-size) 0,
+      calc(100% - var(--post-card-corner-size)) 0,
+      calc(100% - var(--post-card-corner-size)) var(--post-card-corner-size),
+      100% var(--post-card-corner-size),
+      100% calc(100% - var(--post-card-corner-size)),
+      calc(100% - var(--post-card-corner-size))
+        calc(100% - var(--post-card-corner-size)),
+      calc(100% - var(--post-card-corner-size)) 100%,
+      var(--post-card-corner-size) 100%,
+      var(--post-card-corner-size) calc(100% - var(--post-card-corner-size)),
+      0 calc(100% - var(--post-card-corner-size)),
+      0 var(--post-card-corner-size),
+      var(--post-card-corner-size) var(--post-card-corner-size)
+    );
+
+    .post-card--thumbnail {
+      height: 200px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .post-card--title {
+      font-family: "Retro Gaming";
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: 0.05em;
+      margin-bottom: 26px;
+
+      @media (max-width: 700px) {
+        font-size: 14px;
+        line-height: 17.82px;
+      }
+    }
+
+    .post-card--description,
+    .post-card--meta,
+    .post-card--tags {
+      font-family: "Instructions";
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    .post-card--description,
+    .post-card--meta {
+      color: $dark-blue-1;
+    }
+
+    .post-card--description {
+      flex: 1;
+      font-size: 24px;
+      line-height: 21px;
+      margin-bottom: 16px;
+
+      @media (max-width: 700px) {
+        font-size: 20px;
+        line-height: 17.62px;
+      }
+    }
+
+    .post-card--meta {
+      font-size: 18px;
+      line-height: 16px;
+      margin-bottom: 12px;
+    }
+
+    .post-card--tags {
+      font-size: 18px;
+      line-height: 16px;
+      color: $blue;
+
+      .post-card--tags--tag:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,18 +1,40 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
+import { HomeComponent } from "./pages/home/home.component";
+import { PostsComponent } from "./pages/posts/posts.component";
+import { PostComponent } from "./pages/post/post.component";
+
+import { PostCardComponent } from "./components/post-card/post-card.component";
+
+const routes: Routes = [
+  {
+    path: "",
+    pathMatch: "full",
+    component: HomeComponent,
+  },
+  {
+    path: "posts",
+    component: PostsComponent,
+  },
+  {
+    path: "posts/:slug",
+    component: PostComponent,
+  },
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    PostsComponent,
+    PostComponent,
+    PostCardComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

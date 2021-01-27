@@ -1,0 +1,10 @@
+<div class="posts">
+  <div class="posts--header">Posts</div>
+  <div class="posts--list">
+    <jvdev-post-card
+      *ngFor="let post of posts"
+      [post]="post"
+      class="posts--list--card"
+    ></jvdev-post-card>
+  </div>
+</div>

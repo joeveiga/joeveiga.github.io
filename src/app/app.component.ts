@@ -2,15 +2,13 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "jvdev-root",
-  template: `
-    <div style="text-align:center" class="content">
-      <h1>It's alive!</h1>
-      <h3>Not quite...</h3>
-    </div>
-    <router-outlet></router-outlet>
-  `,
+  template: ` <router-outlet></router-outlet> `,
   styles: [
     `
+      :host {
+        flex: 1;
+      }
+
       h1 {
         font-family: "Retro Gaming";
       }
