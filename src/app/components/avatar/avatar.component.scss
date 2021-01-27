@@ -1,0 +1,57 @@
+@import "../../../scss/colors";
+
+:host {
+  --avatar-size: 200px;
+  --avatar-border-size: calc(var(--avatar-size) * 0.04);
+  --avatar-border-dent-lg: calc(var(--avatar-size) * 0.125);
+  --avatar-border-dent-sm: calc(var(--avatar-size) * 0.075);
+  --avatar-border-shape: polygon(
+    var(--avatar-border-dent-lg) 0,
+    calc(100% - var(--avatar-border-dent-lg)) 0,
+    calc(100% - var(--avatar-border-dent-lg)) var(--avatar-border-dent-sm),
+    calc(100% - var(--avatar-border-dent-sm)) var(--avatar-border-dent-sm),
+    calc(100% - var(--avatar-border-dent-sm)) var(--avatar-border-dent-lg),
+    100% var(--avatar-border-dent-lg),
+    100% calc(100% - var(--avatar-border-dent-lg)),
+    calc(100% - var(--avatar-border-dent-sm))
+      calc(100% - var(--avatar-border-dent-lg)),
+    calc(100% - var(--avatar-border-dent-sm))
+      calc(100% - var(--avatar-border-dent-sm)),
+    calc(100% - var(--avatar-border-dent-lg))
+      calc(100% - var(--avatar-border-dent-sm)),
+    calc(100% - var(--avatar-border-dent-lg)) 100%,
+    var(--avatar-border-dent-lg) 100%,
+    var(--avatar-border-dent-lg) calc(100% - var(--avatar-border-dent-sm)),
+    var(--avatar-border-dent-sm) calc(100% - var(--avatar-border-dent-sm)),
+    var(--avatar-border-dent-sm) calc(100% - var(--avatar-border-dent-lg)),
+    0 calc(100% - var(--avatar-border-dent-lg)),
+    0 var(--avatar-border-dent-lg),
+    var(--avatar-border-dent-sm) var(--avatar-border-dent-lg),
+    var(--avatar-border-dent-sm) var(--avatar-border-dent-sm),
+    var(--avatar-border-dent-lg) var(--avatar-border-dent-sm),
+    var(--avatar-border-dent-lg) 0
+  );
+
+  display: block;
+  filter: drop-shadow(-4px 4px 0px $blue);
+
+  .avatar {
+    position: relative;
+    background-color: $dark-blue-3;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    clip-path: var(--avatar-border-shape);
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../../../assets/images/avatar.jpeg);
+      background-size: cover;
+      top: var(--avatar-border-size);
+      left: var(--avatar-border-size);
+      width: calc(var(--avatar-size) - 2 * var(--avatar-border-size));
+      height: calc(var(--avatar-size) - 2 * var(--avatar-border-size));
+      clip-path: var(--avatar-border-shape);
+    }
+  }
+}

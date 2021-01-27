@@ -8,6 +8,7 @@ import { PostsComponent } from "./pages/posts/posts.component";
 import { PostComponent } from "./pages/post/post.component";
 
 import { PostCardComponent } from "./components/post-card/post-card.component";
+import { AvatarComponent } from './components/avatar/avatar.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
     PostsComponent,
     PostComponent,
     PostCardComponent,
+    AvatarComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],

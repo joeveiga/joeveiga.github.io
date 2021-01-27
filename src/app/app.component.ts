@@ -7,6 +7,8 @@ import { Component } from "@angular/core";
     `
       :host {
         flex: 1;
+        display: flex;
+        flex-direction: column;
       }
 
       h1 {
