@@ -13,8 +13,12 @@
 
     .home--panel {
       flex: 0 1 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       background-color: $dark-blue-3;
       position: relative;
+      padding: 0 50px;
 
       &::after {
         content: "";
@@ -24,6 +28,20 @@
         left: 100%;
         width: 16px;
         background: url(../../../assets/decorations/panel_border.svg);
+      }
+
+      .home--panel--whoami {
+        font-family: "Retro Gaming";
+        font-size: 32px;
+        line-height: 41px;
+        margin: 40px 0 20px 0;
+      }
+
+      .home--panel--bio {
+        font-family: "Instructions";
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 21px;
       }
     }
   }
