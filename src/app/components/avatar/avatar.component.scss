@@ -52,6 +52,7 @@
       width: calc(var(--avatar-size) - 2 * var(--avatar-border-size));
       height: calc(var(--avatar-size) - 2 * var(--avatar-border-size));
       clip-path: var(--avatar-border-shape);
+      filter: grayscale(1);
     }
   }
 }
