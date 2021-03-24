@@ -5,44 +5,89 @@
   display: flex;
   flex-direction: column;
   background: linear-gradient(127.54deg, $dark-blue-3 63.9%, $dark-blue-5 100%);
+}
 
-  .home {
-    flex: 1;
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  &__panel {
+    z-index: 3;
+    flex: 0 1 40%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $dark-blue-4;
+    position: relative;
+    padding: 0 50px;
 
-    .home--panel {
-      flex: 0 1 40%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: $dark-blue-4;
-      position: relative;
-      padding: 0 50px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      width: 16px;
+      background: url(../../../assets/decorations/panel_border.svg);
+    }
+  }
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 100%;
-        width: 16px;
-        background: url(../../../assets/decorations/panel_border.svg);
-      }
+  &__whoami {
+    font-family: "Retro Gaming";
+    font-size: 32px;
+    line-height: 41px;
+    margin: 40px 0 20px 0;
+  }
 
-      .home--panel--whoami {
-        font-family: "Retro Gaming";
-        font-size: 32px;
-        line-height: 41px;
-        margin: 40px 0 20px 0;
-      }
+  &__bio {
+    font-family: "Instructions";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 21px;
+  }
 
-      .home--panel--bio {
-        font-family: "Instructions";
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 21px;
-      }
+  &__bg-decorations {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  &__bg-board-1,
+  &__bg-board-2 {
+    position: absolute;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../../../assets/decorations/bg_gameboard.svg);
+      width: 315px;
+      height: 284px;
+    }
+  }
+
+  &__bg-board-1 {
+    top: 50px;
+    right: 50px;
+
+    &::after {
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__bg-board-2 {
+    left: 50%;
+    bottom: 40px;
+
+    &::after {
+      left: 0;
+      bottom: 0;
     }
   }
 }
