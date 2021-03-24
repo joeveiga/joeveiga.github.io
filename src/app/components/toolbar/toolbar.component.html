@@ -1,0 +1,86 @@
+<div class="toolbar">
+  <img src="assets/images/logo.svg" alt="" class="toolbar__logo" />
+  <div class="toolbar__menu-container">
+    <a
+      routerLink="/"
+      class="toolbar__menu-item"
+      routerLinkActive="toolbar__menu-item--active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <svg
+        class="toolbar__menu-item-img"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M13.3334 1.33301H10.6667V3.99967H8.00008V6.66634L5.33341 6.66634V9.33301L2.66675 9.33301V11.9997H9.33341V9.33301H14.6667V11.9997H21.3334V9.33301L18.6667 9.33301V6.66634L16.0001 6.66634V3.99967H13.3334V1.33301ZM4.00008 19.9997V22.6663H20.0001V19.9997V17.333H17.3334V19.9997H6.66675V17.333H4.00008V19.9997Z"
+        />
+      </svg>
+      <div class="toolbar__menu-item-text">HOME</div>
+    </a>
+    <a
+      routerLink="/posts"
+      class="toolbar__menu-item"
+      routerLinkActive="toolbar__menu-item--active"
+    >
+      <svg
+        class="toolbar__menu-item-img"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="2.66675" y="2.66602" width="9.33333" height="2.66667" />
+        <rect x="2.66675" y="18.666" width="18.6667" height="2.66667" />
+        <path
+          d="M13.1413 8.58598L20.3948 1.33254L22.2804 3.21816L15.0269 10.4716L13.4797 10.1333L13.1413 8.58598Z"
+        />
+        <rect x="18.6667" y="10.666" width="2.66667" height="8" />
+        <rect
+          x="16"
+          y="13.333"
+          width="2.66667"
+          height="8"
+          transform="rotate(90 16 13.333)"
+        />
+        <rect
+          x="10.6667"
+          y="8"
+          width="2.66667"
+          height="2.66667"
+          transform="rotate(90 10.6667 8)"
+        />
+        <rect x="2.66675" y="5.33301" width="2.66667" height="13.3333" />
+      </svg>
+      <div class="toolbar__menu-item-text">POSTS</div>
+    </a>
+    <a
+      routerLink="/contact"
+      class="toolbar__menu-item"
+      routerLinkActive="toolbar__menu-item--active"
+    >
+      <svg
+        class="toolbar__menu-item-img"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M2.66659 4H21.3333V6.66667L22.6666 6.66667L22.6666 17.3333V20H19.9999H3.99992H1.33325V17.3333L1.33325 6.66667L2.66659 6.66667V4ZM19.9999 17.3333V9.33333H18.6666V6.66667H5.33325V9.33333H3.99992L3.99992 17.3333H19.9999ZM5.33325 9.33333V12H9.33325V14.6667H14.6666V12H18.6666V9.33333H13.3333V12H10.6666V9.33333H5.33325Z"
+        />
+      </svg>
+
+      <div class="toolbar__menu-item-text">CONTACT</div>
+    </a>
+  </div>
+</div>
