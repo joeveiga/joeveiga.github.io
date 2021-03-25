@@ -1,1 +1,4 @@
 <p>post works!</p>
+<ng-container *ngIf="url$ | async as url">
+  <markdown [src]="url + '/index.md'"></markdown>
+</ng-container>

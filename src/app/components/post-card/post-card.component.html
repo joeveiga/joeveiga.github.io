@@ -2,19 +2,20 @@
   class="post-card"
   (mouseenter)="_hover = true"
   (mouseleave)="_hover = false"
+  (click)="onClick()"
 >
   <img
     *ngIf="thumbnail"
     [src]="thumbnail"
     [alt]="post?.title"
-    class="post-card--thumbnail"
+    class="post-card__thumbnail"
   />
-  <div class="post-card--title">{{ post?.title }}</div>
-  <div class="post-card--description">{{ post?.description }}</div>
-  <div class="post-card--meta">
+  <div class="post-card__title">{{ post?.title }}</div>
+  <div class="post-card__description">{{ post?.description }}</div>
+  <div class="post-card__meta">
     {{ post?.date | date: "mediumDate" }}
   </div>
-  <div *ngIf="tags" class="post-card--tags">
-    <span *ngFor="let tag of tags" class="post-card--tags--tag">{{ tag }}</span>
+  <div *ngIf="tags" class="post-card__tags">
+    <span *ngFor="let tag of tags" class="post-card__tag">{{ tag }}</span>
   </div>
 </div>

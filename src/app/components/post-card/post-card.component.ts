@@ -1,8 +1,10 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  EventEmitter,
   HostBinding,
   Input,
+  Output,
 } from "@angular/core";
 import { PostMeta } from "src/app/interfaces/post-meta";
 
@@ -13,9 +15,11 @@ import { PostMeta } from "src/app/interfaces/post-meta";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostCardComponent {
-  @HostBinding("class.post-card__hover") _hover: boolean;
+  @HostBinding("class.post-card--hover") _hover: boolean;
 
   @Input() post: PostMeta;
+
+  @Output() cardClick = new EventEmitter<PostMeta>();
 
   get thumbnail(): string {
     return this.post?.slug
@@ -28,4 +32,8 @@ export class PostCardComponent {
   }
 
   constructor() {}
+
+  onClick(): void {
+    this.cardClick.emit(this.post);
+  }
 }

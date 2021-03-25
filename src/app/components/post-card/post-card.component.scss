@@ -13,7 +13,7 @@
   will-change: transform;
   filter: drop-shadow(0px 0px 0px #000);
 
-  &.post-card__hover {
+  &.post-card--hover {
     filter: drop-shadow(
       calc(-1 * var(--post-card-shadow-length)) var(--post-card-shadow-length)
         #000
@@ -102,13 +102,13 @@
       );
     }
 
-    .post-card--thumbnail {
+    &__thumbnail {
       height: 200px;
       width: 100%;
       margin-bottom: 20px;
     }
 
-    .post-card--title {
+    &__title {
       font-family: "Retro Gaming";
       font-size: 18px;
       line-height: 23px;
@@ -121,20 +121,20 @@
       }
     }
 
-    .post-card--description,
-    .post-card--meta,
-    .post-card--tags {
+    &__description,
+    &__meta,
+    &__tags {
       font-family: "Instructions";
       font-weight: 500;
       letter-spacing: 0.05em;
     }
 
-    .post-card--description,
-    .post-card--meta {
+    &__description,
+    &__meta {
       color: $dark-blue-2;
     }
 
-    .post-card--description {
+    &__description {
       flex: 1;
       font-size: 24px;
       line-height: 21px;
@@ -146,20 +146,20 @@
       }
     }
 
-    .post-card--meta {
+    &__meta {
       font-size: 18px;
       line-height: 16px;
       margin-bottom: 12px;
     }
 
-    .post-card--tags {
+    &__tags {
       font-size: 18px;
       line-height: 16px;
       color: $blue;
+    }
 
-      .post-card--tags--tag:not(:last-child) {
-        margin-right: 20px;
-      }
+    &__tag:not(:last-child) {
+      margin-right: 20px;
     }
   }
 }

@@ -4,6 +4,7 @@
     <jvdev-post-card
       *ngFor="let post of posts"
       [post]="post"
+      (cardClick)="onPostClicked($event)"
       class="posts--list--card"
     ></jvdev-post-card>
   </div>
