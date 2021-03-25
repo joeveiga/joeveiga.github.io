@@ -13,7 +13,7 @@
   will-change: transform;
   filter: drop-shadow(0px 0px 0px #000);
 
-  &.post-card--hover {
+  &:hover {
     filter: drop-shadow(
       calc(-1 * var(--post-card-shadow-length)) var(--post-card-shadow-length)
         #000
@@ -106,6 +106,7 @@
       height: 200px;
       width: 100%;
       margin-bottom: 20px;
+      background-image: var(--post-card-thumbnail);
     }
 
     &__title {

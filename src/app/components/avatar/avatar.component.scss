@@ -31,9 +31,10 @@
     var(--avatar-border-dent-lg) var(--avatar-border-dent-sm),
     var(--avatar-border-dent-lg) 0
   );
+  --avatar-shadow-color: #{$blue};
 
   display: block;
-  filter: drop-shadow(-4px 4px 0px $blue);
+  filter: drop-shadow(-4px 4px 0px var(--avatar-shadow-color));
 
   .avatar {
     position: relative;

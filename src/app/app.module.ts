@@ -12,6 +12,7 @@ import { PostComponent } from "./pages/post/post.component";
 import { PostCardComponent } from "./components/post-card/post-card.component";
 import { AvatarComponent } from "./components/avatar/avatar.component";
 import { ToolbarComponent } from "./components/toolbar/toolbar.component";
+import { PostMetaComponent } from './components/post-meta/post-meta.component';
 
 const routes: Routes = [
   {
@@ -38,6 +39,7 @@ const routes: Routes = [
     PostCardComponent,
     AvatarComponent,
     ToolbarComponent,
+    PostMetaComponent,
   ],
   imports: [
     BrowserModule,

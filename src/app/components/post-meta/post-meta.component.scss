@@ -1,0 +1,29 @@
+@import "../../../scss/colors";
+
+.post-meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Montserrat";
+
+  &__avatar {
+    --avatar-size: 65px;
+    --avatar-shadow-color: transparent;
+
+    margin-right: 24px;
+  }
+
+  &__author {
+    color: $yellow;
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 48px;
+  }
+
+  &__date {
+    color: $dark-blue-1;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+}

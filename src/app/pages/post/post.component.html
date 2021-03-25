@@ -1,4 +1,15 @@
-<p>post works!</p>
-<ng-container *ngIf="url$ | async as url">
-  <markdown [src]="url + '/index.md'"></markdown>
-</ng-container>
+<div class="post">
+  <ng-container *ngIf="url$ | async as url">
+    <div *ngIf="meta$ | async as meta" class="post__meta">
+      <div
+        class="post__image"
+        [style.background-image]="'url(' + url + '/thumbnail.jpg)'"
+      ></div>
+      <div class="post__meta-content">
+        <div class="post__title">{{ meta.title }}</div>
+        <jvdev-post-meta [meta]="meta"></jvdev-post-meta>
+      </div>
+    </div>
+    <div markdown [src]="url + '/index.md'" class="post__content"></div>
+  </ng-container>
+</div>

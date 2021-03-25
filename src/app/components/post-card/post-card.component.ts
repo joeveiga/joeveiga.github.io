@@ -15,15 +15,14 @@ import { PostMeta } from "src/app/interfaces/post-meta";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostCardComponent {
-  @HostBinding("class.post-card--hover") _hover: boolean;
-
   @Input() post: PostMeta;
 
   @Output() cardClick = new EventEmitter<PostMeta>();
 
+  @HostBinding("style.--post-card-thumbnail")
   get thumbnail(): string {
     return this.post?.slug
-      ? `assets/posts/${this.post?.slug}/thumbnail.jpg`
+      ? `url(assets/posts/${this.post?.slug}/thumbnail.jpg)`
       : null;
   }
 

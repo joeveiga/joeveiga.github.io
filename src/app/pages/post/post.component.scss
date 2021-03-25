@@ -1,0 +1,33 @@
+.post {
+  &__meta {
+    margin-bottom: 6px;
+  }
+
+  &__image {
+    height: 480px;
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 14px;
+  }
+
+  &__title {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 98px;
+    margin-bottom: 14px;
+  }
+
+  &__meta-content,
+  &__content {
+    width: 60%;
+    margin: auto;
+  }
+
+  &__content {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 150%;
+  }
+}
