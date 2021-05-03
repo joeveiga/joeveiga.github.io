@@ -31,3 +31,28 @@
     line-height: 150%;
   }
 }
+
+@media (max-width: 600px) {
+  .post {
+    &__image {
+      height: 180px;
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+
+    &__meta-content,
+    &__content {
+      width: 85%;
+    }
+
+    &__content {
+      font-size: 14px;
+      line-height: 200%;
+    }
+  }
+}

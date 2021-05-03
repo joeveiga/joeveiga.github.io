@@ -27,3 +27,17 @@
     letter-spacing: 0.05em;
   }
 }
+
+@media (max-width: 600px) {
+  .post-meta {
+    &__avatar {
+      --avatar-size: 48px;
+      margin-right: 18px;
+    }
+
+    &__author {
+      font-weight: 400;
+      margin-right: 24px;
+    }
+  }
+}
